@@ -1,25 +1,26 @@
 {
-  "name": "react-boilerplate",
-  "version": "0.1.0",
-  "description": "Modern JavaScript Tooling with React",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "react",
-    "git",
-    "javascript",
-    "npm",
-    "js",
-    "webpack",
-    "eslint",
-    "husky",
-    "jest"
-  ],
-  "author": "Stephen A. Ingram <stephen.a.ingram@gmail.com> (https://moolisoft.com/)",
-  "license": "MIT",
-  "devDependencies": {
-    "prettier": "1.18.2"
-  }
+    "name": "react-boilerplate",
+    "version": "0.1.0",
+    "description": "Modern JavaScript Tooling with React",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write \"./**/*.{js,jsx,css,htm,json,ts,html,sass,scss}\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "react",
+        "git",
+        "javascript",
+        "npm",
+        "js",
+        "webpack",
+        "eslint",
+        "husky",
+        "jest"
+    ],
+    "author": "Stephen A. Ingram <stephen.a.ingram@gmail.com> (https://moolisoft.com/)",
+    "license": "MIT",
+    "devDependencies": {
+        "prettier": "1.18.2"
+    }
 }
