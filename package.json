@@ -22,5 +22,14 @@
     "license": "MIT",
     "devDependencies": {
         "prettier": "1.18.2"
-    }
+    },
+    "dependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nadgerz/react-boilerplate.git"
+    },
+    "bugs": {
+        "url": "https://github.com/nadgerz/react-boilerplate/issues"
+    },
+    "homepage": "https://github.com/nadgerz/react-boilerplate#readme"
 }
