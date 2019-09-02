@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "build": "webpack",
-        "format": "prettier --write \"./**/*.{js,jsx,css,htm,json,ts,html,sass,scss}\"",
+        "format": "prettier --write \"src/**/*.{js,jsx,css,htm,json,ts,html,sass,scss}\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [
