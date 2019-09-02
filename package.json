@@ -30,7 +30,11 @@
         "webpack": "4.39.3",
         "webpack-cli": "3.3.7"
     },
-    "dependencies": {},
+    "dependencies": {
+        "prop-types": "15.7.2",
+        "react": "16.9.0",
+        "react-dom": "16.9.0"
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/nadgerz/react-boilerplate.git"
