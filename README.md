@@ -45,4 +45,5 @@ npm i -D @babel/core @babel/cli @babel/preset-env
 $(npm bin)/babel src/greet.js
 $(npm bin)/babel src/greet.js --presets=@babel/preset-env
 
-
+# need to get babel and webpack to work together... so we use loaders.
+npm i -D babel-loader
