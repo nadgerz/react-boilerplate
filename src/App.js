@@ -9,11 +9,16 @@ class App extends Component {
     return (
       <div>
         <h1>Hello World</h1>
-        <h2>Count: ${this.state.count}</h2>
+        <h2>Count: {this.state.count}</h2>
         <button
-          onClick={() => this.setState(state => ({ count: state.count }))}
+          onClick={() => this.setState(state => ({ count: state.count + 1 }))}
         >
-          Click Me!
+          +
+        </button>
+        <button
+          onClick={() => this.setState(state => ({ count: state.count - 1 }))}
+        >
+          -
         </button>
       </div>
     );
