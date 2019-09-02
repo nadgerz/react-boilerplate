@@ -6,7 +6,7 @@ git init
 git status
 stdconfig
 stdnpm
-pw package.json
+prettier --write package.json
 git commit -m "4 spaces?" .
 cat package.json
 git remote add origin https://github.com/nadgerz/react-boilerplate.git
@@ -30,7 +30,19 @@ node dist/main.js
 cd src/
 cat > greet.js
 vim index.js 
-pw *js
+prettier --write *.js
 cd ..
 npm run build -- --mode development
 node dist/main.js
+
+# Add a webpack config file
+vim webpack.config.js
+
+# add babel packages
+npm run build -- --mode development
+
+npm i -D @babel/core @babel/cli @babel/preset-env
+$(npm bin)/babel src/greet.js
+$(npm bin)/babel src/greet.js --presets=@babel/preset-env
+
+
