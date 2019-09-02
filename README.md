@@ -47,3 +47,16 @@ $(npm bin)/babel src/greet.js --presets=@babel/preset-env
 
 # need to get babel and webpack to work together... so we use loaders.
 npm i -D babel-loader
+
+npm i -S react react-dom prop-types
+cd src/
+vim App.js
+
+# this will fail because babel doesn't know about JSX
+npm run build
+
+# so get something to help
+npm i -D @babel/preset-react
+
+# and add to the presets section in webpack.config.js
+
