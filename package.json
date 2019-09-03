@@ -6,7 +6,7 @@
     "scripts": {
         "build": "webpack --config webpack.config.prod.js",
         "dev": "webpack-dev-server --config webpack.config.dev.js",
-        "dev:hot": "webpack-dev-server --hot --config webpack.config.dev.js",
+        "dev:hot": "npm run dev -- --hot",
         "format": "prettier --write \"src/**/*.{js,jsx,css,htm,json,ts,html,sass,scss}\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
