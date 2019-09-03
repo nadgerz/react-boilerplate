@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 
 class App extends Component {
   state = {
@@ -29,4 +30,7 @@ class App extends Component {
   }
 }
 
-export default App;
+// const hotFunction = hot(module)
+// export default hotFunction(App);
+
+export default hot(module)(App);
