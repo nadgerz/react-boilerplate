@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 
-import Warning from './Warning';
+const Warning = React.lazy(() => import('./Warning'));
 
 class App extends Component {
   state = {
