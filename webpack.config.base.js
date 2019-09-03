@@ -22,6 +22,7 @@ module.exports = {
                   chrome: 68,
                 },
                 useBuiltIns: 'entry',
+                corejs: '3.2.1',
               },
             ],
             '@babel/preset-react',
