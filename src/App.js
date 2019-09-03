@@ -5,9 +5,13 @@ class App extends Component {
     count: 0,
   };
 
-  increment() {}
+  increment = () => {
+    this.setState(state => ({ count: state.count + 1 }));
+  };
 
-  decrement() {}
+  decrement = () => {
+    this.setState(state => ({ count: state.count - 1 }));
+  };
 
   render() {
     const { count } = this.state;
