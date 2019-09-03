@@ -18,9 +18,7 @@ module.exports = {
             [
               '@babel/preset-env',
               {
-                targets: {
-                  chrome: 68,
-                },
+                targets: ['last 2 versions', 'not dead', 'not < 2%'],
                 useBuiltIns: 'entry',
                 corejs: '3.2.1',
               },
