@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 
+import Warning from './Warning';
+
 class App extends Component {
   state = {
     count: 0,
@@ -25,6 +27,8 @@ class App extends Component {
 
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
+
+        {count > 10 ? <Warning /> : null}
       </div>
     );
   }
