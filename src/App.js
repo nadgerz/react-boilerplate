@@ -5,11 +5,17 @@ class App extends Component {
     count: 0,
   };
 
+  increment() {}
+
+  decrement() {}
+
   render() {
+    const { count } = this.state;
+
     return (
       <div>
         <h1>Hello World</h1>
-        <h2>Count: {this.state.count}</h2>
+        <h2 className={count > 10 ? 'warning' : null}>Count: {count}</h2>
         <button
           onClick={() => this.setState(state => ({ count: state.count + 1 }))}
         >
