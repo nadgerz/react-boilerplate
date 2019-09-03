@@ -18,7 +18,12 @@ module.exports = {
             [
               '@babel/preset-env',
               {
-                targets: ['last 2 versions', 'not dead', 'not < 2%', 'not ie 11'],
+                targets: [
+                  'last 2 versions',
+                  'not dead',
+                  'not < 2%',
+                  'not ie 11',
+                ],
                 useBuiltIns: 'entry',
                 corejs: '3.2.1',
               },
@@ -28,6 +33,7 @@ module.exports = {
           plugins: [
             'react-hot-loader/babel',
             '@babel/plugin-proposal-class-properties',
+            '@babel/plugin-syntax-dynamic-import',
           ],
         },
       },
