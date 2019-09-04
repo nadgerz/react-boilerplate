@@ -8,6 +8,10 @@ class App extends Component {
     count: 0,
   }
 
+  componentWillMoount() {
+    console.log('This lifecycle hook should be avoided')
+  }
+
   increment = () => {
     this.setState(state => ({ count: state.count + 1 }))
   }
