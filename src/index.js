@@ -6,12 +6,15 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
 import App from './App'
+import DefaultErrorBoundary from './DefaultErrorBoundary'
 
 import './styles.css'
 
 ReactDOM.render(
   <StrictMode>
-    <App />
+    <DefaultErrorBoundary>
+      <App />
+    </DefaultErrorBoundary>
   </StrictMode>,
   document.getElementById('app'),
 )
