@@ -8,7 +8,7 @@ class App extends Component {
     count: 0,
   }
 
-  componentWillMoount() {
+  componentWillMount() {
     console.log('This lifecycle hook should be avoided')
   }
 
