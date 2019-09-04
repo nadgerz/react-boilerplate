@@ -25,7 +25,7 @@ class App extends Component {
       <div>
         <h1>Hello World!</h1>
 
-        <h2 className={count > 10 ? 'warning' : null}>Count: {count}</h2>
+        <h3 className={count > 10 ? 'warning' : null}>Count: {count}</h3>
 
         <button onClick={this.increment}>+</button>
         <button onClick={this.decrement}>-</button>
