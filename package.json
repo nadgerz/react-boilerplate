@@ -20,11 +20,6 @@
     "test:mocha": "nodemon --exec 'mocha --exit'",
     "test:mocha:min": "nodemon --exec 'mocha -R min --exit'"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
-    }
-  },
   "keywords": [
     "react",
     "git",
@@ -116,7 +111,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged && npm run lint && npm run test"
     }
   },
   "ava": {
