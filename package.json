@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
-    "prod": "npm run build",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "dev:hot": "npm run dev -- --hot",
     "format": "pretty-quick --pattern \"**/*.*(js|jsx|scss|sass|css|json|ts|html)\"",
     "format:full": "prettier --write \"./**/*.{js,jsx,css,htm,json,ts,html,sass,scss}\"",
     "lint": "lint-staged",
-    "test:mocha:min": "nodemon --exec 'mocha -R min --exit'",
+    "prod": "npm run build",
+    "start": "node ./server-start.js",
+    "test": "npm run test:jest",
+    "test:ava": "ava --verbose",
+    "test:ava:watch": "ava --watch",
+    "test:coverage": "nyc ava --verbose",
+    "test:jest": "jest",
     "test:mocha": "nodemon --exec 'mocha --exit'",
-    "test": "jest"
+    "test:mocha:min": "nodemon --exec 'mocha -R min --exit'"
   },
   "husky": {
     "hooks": {
@@ -47,6 +52,7 @@
     "@testing-library/react": "9.3.2",
     "@typescript-eslint/eslint-plugin": "2.10.0",
     "@typescript-eslint/parser": "2.10.0",
+    "ava": "2.4.0",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "css-loader": "3.2.1",
@@ -64,6 +70,7 @@
     "lint-staged": "9.5.0",
     "mocha": "6.2.2",
     "nodemon": "2.0.1",
+    "nyc": "14.1.1",
     "parcel": "1.12.4",
     "prettier": "1.19.1",
     "prettier-plugin-java": "0.4.0",
@@ -97,9 +104,26 @@
     "validator": "12.1.0"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.+(js|jsx)": [
+      "prettier --write",
       "eslint --fix",
       "git add"
+    ],
+    "*.+(json|css|md)": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "ava": {
+    "files": [
+      "**/test/**/*",
+      "!week5/test",
+      "!**/lecture/test"
     ]
   },
   "repository": {
