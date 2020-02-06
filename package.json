@@ -122,7 +122,7 @@
     "winston": "3.2.1"
   },
   "lint-staged": {
-    "*.+(js|jsx)": [
+    "*.+(js|jsx|ts|tsx)": [
       "pretty-quick --staged",
       "eslint --fix"
     ],
@@ -132,7 +132,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run test"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run test"
     }
   },
   "ava": {
