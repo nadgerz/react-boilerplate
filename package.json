@@ -115,7 +115,7 @@
     "graphql": "15.2.0",
     "helmet": "3.23.3",
     "http-status-codes": "1.4.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "mongodb": "3.5.9",
     "mongoose": "5.9.20",
     "morgan": "1.10.0",
